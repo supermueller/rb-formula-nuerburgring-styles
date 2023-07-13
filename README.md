@@ -1,9 +1,3 @@
-Title:   Flipping Cards Panel Instructions
-Author:  Karsten Müller
-CSS:     //cdn.rawgit.com/supermueller/better-than-user-agent-style/master/css/styles.css
-HTML header: <script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-
 Flipping Cards Panel
 ====================
 

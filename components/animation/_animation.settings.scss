@@ -1,0 +1,36 @@
+$_transition-duration: .3s !default;
+$_transition-duration--out: $_transition-duration !default;
+$_transition-duration--in: .1s !default;
+
+    //** Easing functions
+    //** Thanks to https://easings.co/
+
+$_timing-functions: (
+    in-out: (
+        default: ease-in-out,
+        sine: cubic-bezier(.45, .05, .55, .95),
+        cubic: cubic-bezier(.65, .05, .36,1),
+        quart: cubic-bezier(.77,0, .18,1),
+        quint: cubic-bezier(.86,0, .07,1),
+        expo: cubic-bezier(1,0,0,1),
+        back: cubic-bezier(.68,-.55, .27,1.55),
+    ),
+    in: (
+        default: ease-in,
+        sine: cubic-bezier(.47,0, .75, .72),
+        cubic: cubic-bezier(.55, .06, .68, .19),
+        quart: cubic-bezier(.9, .03, .69, .22),
+        quint: cubic-bezier(.95, .05, .8, .04),
+        expo: cubic-bezier(.6, .04, .98, .34),
+        back: cubic-bezier(.6,-.28, .74, .05),
+    ),
+    out: (
+        default: ease-out,
+        sine: cubic-bezier(.39, .57, .56,1),
+        cubic: cubic-bezier(.22, .61, .36,1),
+        quart: cubic-bezier(.17, .84, .44,1),
+        quint: cubic-bezier(.19,1, .22,1),
+        expo: cubic-bezier(.08, .82, .17,1),
+        back: cubic-bezier(.18, .89, .32,1.27),
+    ),
+) !default;

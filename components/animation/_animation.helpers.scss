@@ -1,0 +1,47 @@
+@mixin base-transition(
+    $direction: out,
+    $properties: all,
+    $duration: false,
+    $easing: ease
+){
+
+    @if $duration == false {
+
+        $duration: .3s;
+
+        @if $direction == in and global_variable_exists(_transition-duration--in) {
+            $duration: $_transition-duration--in;
+        }
+
+        @if $direction == out and global_variable_exists(_transition-duration--out) {
+            $duration: $_transition-duration--out;
+        }
+
+    }
+
+    @if length($properties) > 1 {
+
+        $list: ();
+
+        @each $property in $properties {
+            $list: append($list, $property, "comma");
+        }
+
+        transition-duration: $duration;
+        transition-property: $list;
+        transition-timing-function: $easing;
+
+    } @else {
+
+        transition: $properties $duration $easing;
+
+    }
+
+}
+
+@function easing(
+    $type: default,
+    $direction: in-out,
+) {
+    @return map-get(map-get($_timing-functions, $direction), $type);
+}
